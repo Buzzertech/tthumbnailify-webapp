@@ -1,0 +1,42 @@
+<div id="nav">
+  <div class="brand-name">tThumbnailify</div>
+</div>
+
+<div class="container">
+  <div class="input-box">
+    <div class="heading">Enter YouTube Video Link Below</div>
+    <form [formGroup]="urlForm" (submit)="getResults($event)" novalidate #form="ngForm">
+      <div class="input">
+        <tag-input formControlName="url" secondaryPlaceholder="Enter URL" separatorKeys="[',']"placeholder="Enter URL" [blinkIfDupe]="true" [addOnPaste]="true" #tagInput></tag-input>
+        <div class="meta-info">
+            <select formControlName="quality">
+              <option disabled selected>Select Quality</option>
+              <option value="maxresdefault">Maximum</option>
+              <option value="hqdefault">High</option>
+              <option value="mqdefault">Medium</option>
+              <option value="sddefault">Standard</option>
+            </select>
+            <button type="submit" [disabled]="!urlForm.valid"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="tip-box">
+    <div class="left">
+        <i class="fas fa-info-circle"></i>
+    </div>
+    <div class="rest">
+      You can download multiple video thumbnails by simply pasting multiple urls! 
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="wrapper">
+    <div class="meta">&copy; Buzzertech | 2018</div>
+    <div class="social">
+      <a href="https://github.com/Buzzertech" rel="noopener" title="Github | Buzzertech"><i class="fab fa-github"></i></a>
+      <a href="https://buzzertech.com/" rel="noopener" title="Website | Buzzertech"><i class="fas fa-globe"></i></a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="wrapper" [ngClass]="{'no-bg': animateValue === 'start'}">
+    <div class="modal" [@initModal]="animateValue">
+      <div class="close" (click)="destroy()">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="modal-container">
+          <a [href]="file.url">
+            <button>Download {{ file.type }}
+              <i [ngClass]="{'fa-image': file.type === 'image', 'fa-file-archive': file.type === 'zip', 'fas': true}"></i>
+            </button>
+          </a>
+          <span>This link is just valid for the next 24 hrs.</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,208 @@
+#nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  color: #F57C00;
+  .brand-name {
+    font-weight: 800;
+    letter-spacing: -.5px;
+    font-size: 1.5em;
+    margin: 10px 0 10px 1em;
+    background: #fff;
+    border-radius: 50px;
+    padding: 3px 15px;
+  }
+  .nav-items {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+}
+
+.container{
+    display: flex;
+    width: 100%;    
+    height: calc(100% - 10%);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .heading{
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2em;
+        text-align: center;
+        letter-spacing: -.5px;
+        font-family: 'Montserrat';
+        text-shadow: 0 0 30px rgba(black, .5);
+    }
+
+    p{
+        text-align: center;
+    }
+
+    .input{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    .meta-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;      
+        margin-top: 2em;  
+    }
+
+    select{
+        padding: 5px 15px;
+        border:0;
+        outline: 0;
+        background: #fff;
+        width: 50%;
+        height: 48px;
+        
+    }
+    button{
+        padding: 5px 15px;
+        outline: 0;
+        border: 0;
+        width: 50%;
+        height: 48px;
+        background: #FFCC80;
+        color: rgba(white, .9);
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+
+        &:hover{
+            transition: .3s ease-in-out;
+            background: #FFA726;
+        }
+
+        &:disabled{
+            background: #eee;
+            color: rgba(black,.2);
+            cursor: not-allowed;
+        }
+    }
+
+
+    .tip-box{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        color: #000;
+        background-color: #fff;
+        width: 40%;
+        height: 50px;
+        overflow: hidden;
+        margin-top: 20px;
+
+        .left{
+            display: inline-flex;
+            background: #eee;
+            align-items: center;
+            height: 100%;
+            width: 10%;
+            justify-content: center;
+            color: #F9A825;
+        }
+
+        .rest{
+            display: inline-flex;
+            width: 90%;
+            font-size: .9em;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            
+        }
+    }
+}
+
+.footer{
+    position: absolute;
+    right:0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+    .wrapper{
+        display: flex;
+        justify-content: space-between;        
+        align-items: center;
+        padding: 10px;
+        background: rgba(black, .1);
+
+        .meta{
+            font-weight: bold;
+            color: rgba(black, .5);
+        }
+        .social{
+            a{
+                font-size: 1.3em !important;
+                color: rgba(black,.5) !important;
+                padding: 5px;
+            }
+           
+        }
+    }
+
+   
+}
+
+@media screen and (max-width: 1000px){
+    .container{
+        .tip-box{
+            width: 90%;
+            height: auto;
+            flex-direction: column;
+            .left,.rest{
+                width: 100%;
+            }
+            .left{
+                padding: 10px 0;
+                font-size: 1.5em;
+            }
+            .rest{
+                width: 100%;
+                font-size: 1em;
+                padding: 15px 10px;
+                text-align: center;
+            }
+        }
+    }
+    
+    .footer{
+        position: relative;
+    }
+}
+::ng-deep .ng2-tag-input__text-input[_ngcontent-c3]{
+    border-radius: 25px;
+    width: 40vw;
+    padding: 5px 15px !important;
+    box-shadow: 0 0 30px rgba(black, .2);
+    @media screen and (max-width: 1000px){
+        width: 90vw;
+    }
+}
+::ng-deep tag[_ngcontent-c1]{
+    padding: 5px 15px !important;
+    border-radius: 25px !important;
+    @media screen and (max-width: 1000px){
+        width: 20vw;
+    }
+}
+::ng-deep .ng2-tag-input[_ngcontent-c1]{
+    border-bottom: 0px !important;
+}
